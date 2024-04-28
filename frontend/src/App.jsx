@@ -1,42 +1,35 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
 import "./App.css";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+} from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import AboutMe from "./pages/AboutMe";
+import Project from "./pages/Project";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  );
-}
+const App = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route
+        element={
+          <>
+            <NavBar /> <Outlet />
+          </>
+        }
+        path="/"
+        id="rootlayout"
+      >
+        <Route element={<Home />} path="/" />
+        <Route element={<Contact />} path="/contact" />
+        <Route element={<AboutMe />} path="/aboutme" />
+        <Route element={<Project />} path="/project" />
+      </Route>
+    </Route>
+  )
+);
 
 export default App;
