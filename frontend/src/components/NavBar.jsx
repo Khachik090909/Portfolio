@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useUserContext } from "../contexte/UserContext";
 import "./NavBar.scss";
 
 function NavBar() {
   const navigate = useNavigate();
+  const { darkMode, setDarkMode } = useUserContext();
   const navPath = [
     { name: "Home", path: "/" },
     { name: "Contact", path: "/contact" },
     { name: "About Me", path: "/aboutme" },
     { name: "Project", path: "/project" },
   ];
+  console.log(darkMode);
   return (
     <div className="navbar">
       <h3>Portfolio.</h3>
+      <input
+        type="range"
+        min="22"
+        max="233"
+        onChange={(e) => setDarkMode(e.target.value)}
+        value={darkMode}
+        className="dark-mode"
+        style={{ color: "red" }}
+      />
       <div className="nav-bar-container">
         {navPath.map((item) => (
           <button

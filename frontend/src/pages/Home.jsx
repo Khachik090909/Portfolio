@@ -1,27 +1,24 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { typeAndDeleteText, typeText } from "../components/functiones";
+import { useUserContext } from "../contexte/UserContext";
 import "./Home.scss";
 import facebook from "../assets/svg/facebook.svg";
 import github from "../assets/svg/github.svg";
 import lincedin from "../assets/svg/lincedin.svg";
-import curser from "../assets/cueseur.png";
-import hero from "../assets/hero.svg";
 
 function Home() {
+  const navigate = useNavigate();
   const dev = [
     "Frontend Developer",
     "Backend Developer",
     "Fullstack Developer",
   ];
+  const { darkMode } = useUserContext();
   const [text, setText] = useState("");
-  const [cordonnerCursor, setCordonnerCursor] = useState({ x: 0, y: 0 });
-  const [move, setMove] = useState({ x: 0, y: 0 });
-  const [rotate, setRotate] = useState(0);
-
-  const dimensionHeight = window.innerHeight;
-  const dimensionWidth = window.innerWidth;
 
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
     if (index < dev.length - 1) {
       typeAndDeleteText(dev[index], setText, setIndex, index);
@@ -29,25 +26,18 @@ function Home() {
       typeText(dev[index], setText, 100);
     }
   }, [index]);
-  useEffect(() => {
-    setMove({
-      x: cordonnerCursor.x - dimensionWidth / 2,
-      y: cordonnerCursor.y - dimensionHeight / 2,
-    });
-    setRotate(
-      (Math.atan2(
-        cordonnerCursor.y - dimensionHeight / 2,
-        cordonnerCursor.x - dimensionWidth / 2
-      ) *
-        180) /
-        Math.PI
-    );
-  }, [cordonnerCursor]);
 
   return (
     <div
       className="home"
-      onMouseMove={(e) => setCordonnerCursor({ x: e.clientX, y: e.clientY })}
+      style={{
+        backgroundColor: `rgb(
+          ${255 - darkMode}, ${255 - darkMode}, ${255 - darkMode}`,
+        color:
+          darkMode < 125
+            ? `rgb(${darkMode - 22}, ${darkMode - 22}, ${darkMode - 22})`
+            : `rgb(${darkMode + 22}, ${darkMode + 22}, ${darkMode + 22})`,
+      }}
     >
       <section className="home-container">
         <div className="info">
@@ -74,14 +64,10 @@ function Home() {
               <img src={lincedin} />
             </button>
           </div>
-          <button className="dawnload-cv">
-            {" "}
-            <div className="dawnload-cv-text">
-              <h2>Télécharger mon CV</h2>
-            </div>
-          </button>
         </div>
-        <div className="hero"></div>
+        <div>
+          <img src="/src/assets/svg/hero.svg" alt="hero" />
+        </div>
       </section>
       <footer className="tecno">
         <h1>React.js</h1>
@@ -90,17 +76,6 @@ function Home() {
         <h1>MySql</h1>
         <h1>Figma</h1>
       </footer>
-      {cordonnerCursor.y > 50 && (
-        <img
-          src={curser}
-          className="curser"
-          style={{
-            left: cordonnerCursor.x,
-            top: cordonnerCursor.y,
-            transform: "rotate(" + rotate + "deg)",
-          }}
-        />
-      )}
     </div>
   );
 }

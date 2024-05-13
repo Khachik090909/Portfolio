@@ -1,12 +1,21 @@
 // * {
 //   border: 1px solid red;
 // }
+button {
+  border: none;
+}
 .home {
-  cursor: none;
-  overflow: hidden;
-  background-image: url("../assets/svg/subtle-prism.svg");
+  user-select: none;
+
   width: 100vw;
   height: 100vh;
+  .dark-mode {
+    position: absolute;
+    width: 60px;
+    background-color: black;
+    height: 20px;
+    top: 50px;
+  }
   .home-container {
     display: flex;
 
@@ -31,31 +40,6 @@
       p {
         width: 30vw;
       }
-    }
-    .dawnload-cv {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: transparent;
-      color: black;
-      border-radius: 5px;
-      padding: 16px;
-      width: 20vw;
-      .dawnload-cv-text {
-        background-color: rgb(44, 102, 194);
-      }
-    }
-    .dawnload-cv:hover {
-      transform: translate(-50%, -50%) scale(1.5);
-      cursor: none;
-    }
-    .hero {
-      margin: 100px;
-      width: 50vw;
-      height: 70vh;
-      background-image: url("../assets/hero.svg");
-      background-size: cover;
     }
   }
   .tecno {
