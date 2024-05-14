@@ -5,17 +5,8 @@ button {
   border: none;
 }
 .home {
-  user-select: none;
-
   width: 100vw;
   height: 100vh;
-  .dark-mode {
-    position: absolute;
-    width: 60px;
-    background-color: black;
-    height: 20px;
-    top: 50px;
-  }
   .home-container {
     display: flex;
 
