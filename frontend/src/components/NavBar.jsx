@@ -15,15 +15,22 @@ function NavBar() {
   return (
     <div className="navbar">
       <h3>Portfolio.</h3>
-      <input
-        type="range"
-        min="22"
-        max="233"
-        onChange={(e) => setDarkMode(e.target.value)}
-        value={darkMode}
-        className="dark-mode"
-        style={{ color: "red" }}
-      />
+      <div className="darc-mode">
+        <button onClick={() => setDarkMode(22)}>
+          <img src="./src/assets/day-mode.png" alt="" />
+        </button>
+        <input
+          type="range"
+          min="22"
+          max="233"
+          onChange={(e) => setDarkMode(e.target.value)}
+          value={darkMode}
+        />
+        <button onClick={() => setDarkMode(233)}>
+          <img src="./src/assets/moon.png" alt="" />
+        </button>
+      </div>
+
       <div className="nav-bar-container">
         {navPath.map((item) => (
           <button
