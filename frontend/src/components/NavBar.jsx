@@ -12,7 +12,6 @@ function NavBar() {
     { name: "About Me", path: "/aboutme" },
     { name: "Project", path: "/project" },
   ];
-  console.log(darkMode);
   return (
     <div className="navbar">
       <h3>Portfolio.</h3>

@@ -5,7 +5,7 @@ const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 
 export function UserContextProvider({ children }) {
-  const [darkMode, setDarkMode] = useState(125);
+  const [darkMode, setDarkMode] = useState(210);
 
   const memoizedUser = useMemo(() => {
     return { darkMode, setDarkMode };
