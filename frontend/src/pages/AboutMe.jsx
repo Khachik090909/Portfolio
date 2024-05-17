@@ -12,7 +12,28 @@ import attaque1 from "../assets/icon-dev/attaque1.png";
 
 function AboutMe() {
   const { darkMode } = useUserContext();
-  const iconesName = [html, css, react, attaque, figma, js, sql, attaque1];
+  const iconesName = [
+    html,
+    css,
+    react,
+    attaque,
+    figma,
+    js,
+    sql,
+    attaque1,
+    html,
+    css,
+    react,
+    figma,
+    js,
+    sql,
+    html,
+    css,
+    react,
+    figma,
+    js,
+    sql,
+  ];
   const [icones, setIcones] = useState([]);
   const [loss, setLoss] = useState(false);
   useEffect(() => {

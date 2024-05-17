@@ -1,27 +1,17 @@
 import React from "react";
 import "./project.scss";
 import Carrousel from "../components/Swiper";
+import geocod1 from "../assets/captureGeocode/1.png";
+import geocod2 from "../assets/captureGeocode/2.png";
+import geocod3 from "../assets/captureGeocode/3.png";
+import geocod4 from "../assets/captureGeocode/4.png";
+import geocod5 from "../assets/captureGeocode/5.png";
+import geocod6 from "../assets/captureGeocode/6.png";
 
 import { useUserContext } from "../contexte/UserContext";
 function Project() {
   const { darkMode } = useUserContext();
-  const images = [
-    "https://swiperjs.com/demos/images/nature-1.jpg",
-    "https://swiperjs.com/demos/images/nature-2.jpg",
-    "https://swiperjs.com/demos/images/nature-3.jpg",
-    "https://swiperjs.com/demos/images/nature-4.jpg",
-    "https://swiperjs.com/demos/images/nature-5.jpg",
-    "https://swiperjs.com/demos/images/nature-6.jpg",
-    "https://swiperjs.com/demos/images/nature-7.jpg",
-    "https://swiperjs.com/demos/images/nature-8.jpg",
-    "https://swiperjs.com/demos/images/nature-9.jpg",
-    "https://swiperjs.com/demos/images/nature-4.jpg",
-    "https://swiperjs.com/demos/images/nature-5.jpg",
-    "https://swiperjs.com/demos/images/nature-6.jpg",
-    "https://swiperjs.com/demos/images/nature-7.jpg",
-    "https://swiperjs.com/demos/images/nature-8.jpg",
-    "https://swiperjs.com/demos/images/nature-9.jpg",
-  ];
+  const images = [geocod1, geocod2, geocod3, geocod4, geocod5, geocod6];
   return (
     <div
       className="project"

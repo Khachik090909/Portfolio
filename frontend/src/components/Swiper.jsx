@@ -30,7 +30,7 @@ function Carrousel({ images }) {
     >
       {images.map((image) => (
         <SwiperSlide key={image}>
-          <img src={image} />
+          <img src={image} onClick={() => window.open(image)} />
         </SwiperSlide>
       ))}
     </Swiper>
