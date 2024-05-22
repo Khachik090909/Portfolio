@@ -1,0 +1,16 @@
+.contact {
+  padding: 50px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/contactPages.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .contact-form-title {
+    width: 30vw;
+  }
+  .contact-form {
+    width: 30vw;
+  }
+}
