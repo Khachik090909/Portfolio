@@ -9,6 +9,9 @@ import js from "../assets/icon-dev/js.svg";
 import sql from "../assets/icon-dev/sql.svg";
 import attaque from "../assets/icon-dev/attaque.png";
 import attaque1 from "../assets/icon-dev/attaque1.png";
+import facebook from "../assets/svg/facebook.svg";
+import github from "../assets/svg/github.svg";
+import lincedin from "../assets/svg/lincedin.svg";
 
 function AboutMe() {
   const { darkMode } = useUserContext();
@@ -103,7 +106,7 @@ function AboutMe() {
           color: `rgb(${darkMode - 22}, ${darkMode - 22}, ${darkMode - 22})`,
         }}
       >
-        <div>
+        <div className="about-me-text">
           <h1>Khachik Sahakyan</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
@@ -117,6 +120,17 @@ function AboutMe() {
             quos natus libero tempore harum magnam, eligendi vero ab, omnis ut
             nobis. Fugit beatae placeat quaerat facilis voluptatibus?
           </p>
+          <div className="social-networks">
+            <button className="img-icon">
+              <img src={facebook} />
+            </button>
+            <button className="img-icon">
+              <img src={github} />
+            </button>
+            <button className="img-icon">
+              <img src={lincedin} />
+            </button>
+          </div>
         </div>
         <div>
           <img src="/src/assets/svg/hero.svg" alt="" />

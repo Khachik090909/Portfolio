@@ -12,6 +12,21 @@
     width: 50vw;
     height: 80vh;
     z-index: 100;
+    .about-me-text {
+      .social-networks {
+        display: flex;
+        gap: 1rem;
+        .img-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          border: 2px solid rgb(44, 102, 194);
+          border-radius: 50%;
+        }
+      }
+    }
   }
   .atrape-moi {
     position: absolute;
