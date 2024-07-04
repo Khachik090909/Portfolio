@@ -132,7 +132,7 @@ function AboutMe() {
             </button>
           </div>
         </div>
-        <div>
+        <div className="hero">
           <img src="/src/assets/svg/hero.svg" alt="" />
         </div>
       </div>

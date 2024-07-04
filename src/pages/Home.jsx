@@ -5,7 +5,7 @@ import { useUserContext } from "../contexte/UserContext";
 import "./Home.scss";
 
 import curser from "../assets/cueseur.png";
-
+import heroDev from "../assets/svg/heroDev.svg";
 function Home() {
   const navigate = useNavigate();
   const dev = [
@@ -45,14 +45,14 @@ function Home() {
   }, [cordonnerCursor]);
 
   const handlerMouseMove = (e) => {
-    if (e.clientX > dimensionWidth - 65 && e.clientY > dimensionHeight - 50) {
+    if (e.clientX > dimensionWidth - 55 && e.clientY > dimensionHeight - 50) {
       setCordonnerCursor({ x: dimensionWidth - 65, y: dimensionHeight - 50 });
     } else if (e.clientX > dimensionWidth - 65) {
       setCordonnerCursor({ x: dimensionWidth - 65, y: e.clientY });
     } else if (e.clientY > dimensionHeight - 50) {
       setCordonnerCursor({ x: e.clientX, y: dimensionHeight - 50 });
     } else {
-      setCordonnerCursor({ x: e.clientX, y: e.clientY });
+      setCordonnerCursor({ x: e.clientX - 20, y: e.clientY - 20 });
     }
   };
   return (
@@ -97,6 +97,9 @@ function Home() {
           >
             Download CV
           </a>
+        </div>
+        <div className="hero">
+          <img src={heroDev} alt="hero" />
         </div>
       </div>
       <footer className="tecno">

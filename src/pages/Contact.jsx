@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useUserContext } from "../contexte/UserContext";
 import "./contact.scss";
 import emailjs from "emailjs-com";
+import contactPages from "../assets/svg/cahier.svg";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +55,11 @@ const ContactForm = () => {
             : `rgb(${darkMode + 22}, ${darkMode + 22}, ${darkMode + 22})`,
       }}
     >
-      <div className="contact-form-title"></div>
+      <img className="contact-pages" src={contactPages} alt="contactPages" />
+
+      <div className="contact-form-title">
+        <h1>Me contacter</h1>
+      </div>
       <form className="contact-form">
         <div>
           <label htmlFor="name">Nom:</label>
