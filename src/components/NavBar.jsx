@@ -15,8 +15,8 @@ function NavBar() {
   return (
     <div className="navbar">
       <h3>Portfolio.</h3>
-      <div className="darc-mode">
-        <button onClick={() => setDarkMode(22)}>
+      <div className="darc-mode ">
+        <button className="day-mode dark-icon" onClick={() => setDarkMode(22)}>
           <img src="./src/assets/day-mode.png" alt="" />
         </button>
         <input
@@ -26,7 +26,10 @@ function NavBar() {
           onChange={(e) => setDarkMode(e.target.value)}
           value={darkMode}
         />
-        <button onClick={() => setDarkMode(233)}>
+        <button
+          className="night-mode dark-icon"
+          onClick={() => setDarkMode(233)}
+        >
           <img src="./src/assets/moon.png" alt="" />
         </button>
       </div>

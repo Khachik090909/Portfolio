@@ -3,11 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { typeAndDeleteText, typeText } from "../components/functiones";
 import { useUserContext } from "../contexte/UserContext";
 import "./Home.scss";
-import facebook from "../assets/svg/facebook.svg";
-import github from "../assets/svg/github.svg";
-import lincedin from "../assets/svg/lincedin.svg";
-import curser from "../assets/cueseur.png";
 
+import curser from "../assets/cueseur.png";
+import heroDev from "../assets/svg/heroDev.svg";
 function Home() {
   const navigate = useNavigate();
   const dev = [
@@ -46,10 +44,21 @@ function Home() {
     );
   }, [cordonnerCursor]);
 
+  const handlerMouseMove = (e) => {
+    if (e.clientX > dimensionWidth - 55 && e.clientY > dimensionHeight - 50) {
+      setCordonnerCursor({ x: dimensionWidth - 65, y: dimensionHeight - 50 });
+    } else if (e.clientX > dimensionWidth - 65) {
+      setCordonnerCursor({ x: dimensionWidth - 65, y: e.clientY });
+    } else if (e.clientY > dimensionHeight - 50) {
+      setCordonnerCursor({ x: e.clientX, y: dimensionHeight - 50 });
+    } else {
+      setCordonnerCursor({ x: e.clientX - 20, y: e.clientY - 20 });
+    }
+  };
   return (
     <div
       className="home"
-      onMouseMove={(e) => setCordonnerCursor({ x: e.clientX, y: e.clientY })}
+      onMouseMove={(e) => handlerMouseMove(e)}
       style={{
         backgroundColor: `rgb(
           ${255 - darkMode}, ${255 - darkMode}, ${255 - darkMode}`,
@@ -59,36 +68,40 @@ function Home() {
             : `rgb(${darkMode + 22}, ${darkMode + 22}, ${darkMode + 22})`,
       }}
     >
-      <section className="home-container">
+      <div className="home-container">
         <div className="info">
-          <h3> bonjour, je m'appelle</h3>
+          <h3> Bonjour, je m'appelle</h3>
           <h1>Khachik Sahakyan</h1>
-          <h4>
+          <h3>
             je suis un {text}
             <span className="cursor-text"></span>
-          </h4>
+          </h3>
           <p>
             "Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book"
           </p>
-          <div className="social-networks">
-            <button className="img-icon">
-              <img src={facebook} />
-            </button>
-            <button className="img-icon">
-              <img src={github} />
-            </button>
-            <button className="img-icon">
-              <img src={lincedin} />
-            </button>
-          </div>
         </div>
-        <div>
-          <img src="/src/assets/svg/hero.svg" alt="hero" />
+        <div className="download-cv">
+          <a
+            href="cv.zip"
+            className="download"
+            download="Resume PDF"
+            style={{
+              color:
+                darkMode < 125
+                  ? `rgb(${darkMode - 22}, ${darkMode - 22}, ${darkMode - 22})`
+                  : `rgb(${darkMode + 22}, ${darkMode + 22}, ${darkMode + 22})`,
+            }}
+          >
+            Download CV
+          </a>
         </div>
-      </section>
+        <div className="hero">
+          <img src={heroDev} alt="hero" />
+        </div>
+      </div>
       <footer className="tecno">
         <h1>React.js</h1>
         <h1>Node.js</h1>
@@ -96,9 +109,7 @@ function Home() {
         <h1>MySql</h1>
         <h1>Figma</h1>
       </footer>
-      <a href="cv.zip" class="download" download="Resume PDF">
-        Download CV
-      </a>
+
       {cordonnerCursor.y > 50 && (
         <img
           src={curser}
