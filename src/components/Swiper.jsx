@@ -6,19 +6,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./swiper.scss";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import geocod1 from "../assets/contactPages.jpg";
+import geocod1 from "../assets/captureGeoCode/1.png";
 import geocod2 from "../assets/captureGeoCode/2.png";
 import geocod3 from "../assets/captureGeoCode/3.png";
 import geocod4 from "../assets/captureGeoCode/4.png";
 import geocod5 from "../assets/captureGeoCode/5.png";
 import geocod6 from "../assets/captureGeoCode/6.png";
+import geocod6 from "../assets/captureGeoCode/6.png";
 function Carrousel() {
-  const images = [geocod1, geocod1, geocod3, geocod4, geocod5, geocod6];
+  const images = [geocod1, geocod2, geocod3, geocod4, geocod5, geocod6];
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
