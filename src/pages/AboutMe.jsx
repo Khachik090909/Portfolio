@@ -118,7 +118,7 @@ function AboutMe() {
             neque numquam, eum placeat animi, tenetur accusamus! Nesciunt dolore
             minus quam quod quasi molestiae minima in quisquam tenetur, quia
             quos natus libero tempore harum magnam, eligendi vero ab, omnis ut
-            nobis. Fugit beatae placeat quaerat facilis voluptatibus?
+            nobis.
           </p>
           <div className="social-networks">
             <button className="img-icon">
