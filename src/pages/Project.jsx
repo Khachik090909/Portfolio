@@ -4,14 +4,11 @@ import Carrousel from "../components/Swiper";
 import geocod1 from "../assets/captureGeoCode/1.png";
 import geocod2 from "../assets/captureGeoCode/2.png";
 import geocod3 from "../assets/captureGeoCode/3.png";
-import geocod4 from "../assets/captureGeoCode/4.png";
-import geocod5 from "../assets/captureGeoCode/5.png";
-import geocod6 from "../assets/captureGeoCode/6.png";
 
 import { useUserContext } from "../contexte/UserContext";
 function Project() {
   const { darkMode } = useUserContext();
-  const images = [geocod1, geocod2, geocod3, geocod4, geocod5, geocod6];
+  const images = [geocod1, geocod2, geocod3];
   return (
     <div
       className="project"
