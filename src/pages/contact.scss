@@ -1,0 +1,79 @@
+.contact {
+  padding: 50px 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contact-pages {
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+  }
+  .contact-form-title {
+    position: absolute;
+    right: 55vw;
+    width: 23vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 3rem;
+      color: black;
+    }
+  }
+  .contact-form {
+    position: absolute;
+    left: 55vw;
+    width: 24vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: black;
+
+    label {
+      font-size: 1.5rem;
+    }
+    input {
+      border: none;
+      background-color: transparent;
+      border-bottom: 1px solid black;
+      width: 19vw;
+      height: 3vh;
+      font-size: 1.5rem;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    textarea {
+      background-color: transparent;
+      height: 27vh;
+      width: 24vw;
+      font-size: 1rem;
+      resize: none;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: black;
+      font-size: 1.5rem;
+      transition: 300ms;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 10px 20px;
+      width: 10vw;
+      margin: 0 auto;
+    }
+    button:hover {
+      scale: 1.1;
+    }
+  }
+}
