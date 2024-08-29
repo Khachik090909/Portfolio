@@ -17,7 +17,7 @@ function NavBar() {
       <h3>Portfolio.</h3>
       <div className="darc-mode ">
         <button className="day-mode dark-icon" onClick={() => setDarkMode(22)}>
-          <img src="./src/assets/day-mode.png" alt="" />
+          <img src="./src/assets/svg/cahier.svg" alt="day" />
         </button>
         <input
           type="range"
@@ -30,7 +30,7 @@ function NavBar() {
           className="night-mode dark-icon"
           onClick={() => setDarkMode(233)}
         >
-          <img src="./src/assets/moon.png" alt="" />
+          <img src="./src/assets/moon.png" alt="dark" />
         </button>
       </div>
 
