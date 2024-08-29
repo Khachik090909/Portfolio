@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+button {
+  border: none;
+}
+.home {
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+  .home-container {
+    display: flex;
+    justify-content: space-between;
+    .info {
+      padding: 17vh 3vw;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      h3 {
+        font-size: 2rem;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+        width: 30vw;
+      }
+    }
+    .download-cv {
+      z-index: 2;
+      position: absolute;
+      height: 90px;
+      left: 50%;
+      top: 54%;
+      transform: translate(-50%, -50%);
+      transition: 300ms;
+      .download {
+        z-index: 2;
+
+        text-decoration: none;
+        font-size: 3rem;
+        cursor: none;
+        padding: 50px 0 0 50px;
+      }
+    }
+    .download-cv:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    .hero {
+      width: 30vw;
+      height: 87vh;
+      margin-right: 50px;
+      margin-top: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .tecno {
+    position: absolute;
+    padding: 0 3vw;
+    top: 85%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h1 {
+      border: 4px solid rgb(44, 102, 194);
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+  .curser {
+    z-index: 1;
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}
+
+h4 {
+  height: 1.2em;
+  display: flex;
+  align-items: center;
+}
+.cursor-text {
+  display: inline-block;
+  width: 4px; /* Largeur du curseur */
+
+  margin: 0 0 0 0.1em; /* Marges du curseur */
+  height: 1.2em; /* Hauteur du curseur, ajustez selon vos besoins */
+  background-color: black; /* Couleur du curseur */
+  animation: blink-animation 1s infinite; /* Animation de clignotement */
+}
+img {
+  color: aqua;
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0; /* Le curseur devient invisible à la moitié de l'animation */
+  }
+}

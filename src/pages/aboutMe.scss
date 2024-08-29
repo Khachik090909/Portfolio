@@ -1,0 +1,82 @@
+.about-me {
+  width: 100vw;
+  height: 100vh;
+  .about-me-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    width: 60vw;
+    height: calc(100vh - 50px);
+    z-index: 100;
+    .about-me-text {
+      padding: 20px;
+      width: 25vw;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      .social-networks {
+        width: 100%;
+        height: 5vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        .img-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3vw;
+          height: 3vw;
+          border: 2px solid rgb(44, 102, 194);
+          border-radius: 50%;
+          transition: 300ms;
+        }
+        img {
+          width: 90%;
+          height: 90%;
+        }
+        .img-icon:hover {
+          border: 2px solid rgb(44, 102, 194);
+          border-radius: 50%;
+          scale: 1.2;
+        }
+      }
+    }
+    .hero {
+      width: 25vw;
+      height: calc(100vh - 100px);
+      margin-top: 30px;
+      padding-right: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .atrape-moi {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      cursor:
+        url("../assets/cible.png") 16 16,
+        auto; /* Le chemin de l'image */
+    }
+  }
+}
