@@ -1,35 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 import "./swiper.scss";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
-function Carrousel({ images }) {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
+function SwiperContainer({ images, setActiveIndex }) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
   };
-
   return (
     <>
       <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        loop={true}
+        spaceBetween={10}
+        navigation={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        onSlideChange={handleSlideChange}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="mySwiper2"
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img src={image} alt={`Slide ${index + 1}`} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        loop={true}
+        spaceBetween={10}
+        slidesPerView={4}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt="image" />
+            <img src={image} alt={`Slide ${index + 1}`} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -37,4 +60,4 @@ function Carrousel({ images }) {
   );
 }
 
-export default Carrousel;
+export default SwiperContainer;

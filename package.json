@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "better-react-carousel": "^1.1.2",
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "sass": "^1.77.2",
-    "swiper": "^11.1.5"
+    "swiper": "^11.1.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

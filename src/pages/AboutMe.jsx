@@ -11,7 +11,7 @@ import attaque from "../assets/icon-dev/attaque.png";
 import attaque1 from "../assets/icon-dev/attaque1.png";
 import facebook from "../assets/svg/facebook.svg";
 import github from "../assets/svg/github.svg";
-import lincedin from "../assets/svg/lincedin.svg";
+import linkedin from "../assets/svg/lincedin.svg";
 
 function AboutMe() {
   const { darkMode } = useUserContext();
@@ -109,26 +109,49 @@ function AboutMe() {
         <div className="about-me-text">
           <h1>Khachik Sahakyan</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            maiores nisi excepturi neque id aperiam aliquid. Ratione inventore
-            sed nobis facilis dolorum ipsam placeat blanditiis ipsa quibusdam
-            veniam id dolor maiores, magni modi quasi nesciunt impedit harum
-            iure quam illum asperiores. Magni esse vitae hic praesentium
-            consequatur eaque rerum fugit perferendis assumenda accusantium
-            neque numquam, eum placeat animi, tenetur accusamus! Nesciunt dolore
-            minus quam quod quasi molestiae minima in quisquam tenetur, quia
-            quos natus libero tempore harum magnam, eligendi vero ab, omnis ut
-            nobis.
+            Avant de me reconvertir en développeur web, j'ai exercé plusieurs
+            métiers variés qui, bien qu'ils semblent éloignés du développement à
+            première vue, m'ont apporté des compétences précieuses. En tant
+            qu'ingénieur, j'ai acquis la capacité de concevoir et de structurer
+            des solutions complexes, une compétence que j'applique aujourd'hui
+            dans la création d'architectures logicielles robustes. Mon
+            expérience en tant que comptable m'a appris à être rigoureux avec
+            les chiffres et à penser de manière analytique, ce qui s'avère
+            crucial pour aborder les algorithmes et la logique de programmation.
+            Avec une grande curiosité et une forte capacité d'apprentissage,
+            j'ai pu réussir ma reconversion en développement web sans grande
+            difficulté. Mon parcours me permet d'aborder chaque projet avec une
+            perspective unique, en combinant une solide base technique avec des
+            compétences analytiques et créatives.
           </p>
+
           <div className="social-networks">
-            <button className="img-icon">
-              <img src={facebook} />
+            <button
+              className="img-icon"
+              onClick={() =>
+                (window.location.href = "mailto:sahakyan0909@gmail.com")
+              }
+            >
+              <img src={facebook} alt="Facebook" />
             </button>
-            <button className="img-icon">
-              <img src={github} />
+            <button
+              className="img-icon"
+              onClick={() =>
+                window.open("https://github.com/Khachik090909", "_blank")
+              }
+            >
+              <img src={github} alt="GitHub" />
             </button>
-            <button className="img-icon">
-              <img src={lincedin} />
+            <button
+              className="img-icon"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/khachik-sahakyan-b4a52a291/",
+                  "_blank"
+                )
+              }
+            >
+              <img src={linkedin} alt="LinkedIn" />
             </button>
           </div>
         </div>
