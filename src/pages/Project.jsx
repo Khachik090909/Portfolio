@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./project.scss";
-import Carrousel from "../components/Swiper";
-import geocod1 from "../assets/captureGeoCode/1.png";
-import geocod2 from "../assets/captureGeoCode/2.png";
-import geocod3 from "../assets/captureGeoCode/3.png";
-
+import SwiperContainer from "../components/Swiper";
+import data from "../components/titleProject.json";
+import slide1 from "../assets/capture/geocod.png";
+import slide2 from "../assets/capture/coctailAtom.png";
+import slide3 from "../assets/capture/panda.png";
+import slide4 from "../assets/capture/boutade.png";
+import slide5 from "../assets/capture/loreal.png";
 import { useUserContext } from "../contexte/UserContext";
+
+const images = [slide1, slide2, slide3, slide4, slide5];
+const links = [
+  "https://panda-project-seven.vercel.app/",
+  "https://coctail-atom.vercel.app/",
+  "https://panda-project-seven.vercel.app/",
+  "https://boutade.vercel.app/",
+  "https://lorem-project-seven.vercel.app/",
+];
+
 function Project() {
   const { darkMode } = useUserContext();
-  const images = [geocod1, geocod2, geocod3];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const currentProject = data[activeIndex];
+  const currentTitle = Object.keys(currentProject)[0];
+  const currentDescription = Object.values(currentProject)[0];
+  const currentLink = links[activeIndex];
+
   return (
     <div
       className="project"
@@ -25,14 +43,16 @@ function Project() {
     >
       <div className="project-container">
         <div className="project-1">
-          <h1>titre du projet</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            sed maxime quaerat nam sint ut culpa, dolore soluta aliquid! Minus
-            commodi expedita ipsum voluptatem sunt, in voluptate odit sapiente
-            provident.
-          </p>
-          <Carrousel images={images} />
+          <div className="project-title">
+            <h1>{currentTitle}</h1>
+            <p>{currentDescription}</p>
+            <button onClick={() => window.open(currentLink, "_blank")}>
+              Démonstration
+            </button>
+          </div>
+          <div className="project-img">
+            <SwiperContainer images={images} setActiveIndex={setActiveIndex} />
+          </div>
         </div>
       </div>
     </div>
