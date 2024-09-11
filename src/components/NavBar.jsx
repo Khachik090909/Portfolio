@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../contexte/UserContext";
 import "./NavBar.scss";
+import darc from "../assets/svg/moon.svg";
+import day from "../assets/svg/day-mode.svg";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ function NavBar() {
       <div className="darc-mode ">
         <button className="day-mode dark-icon" onClick={() => setDarkMode(22)}>
 
-          <img src="./src/assets/svg/day-mode.svg" alt="svg1" />
+            <img src={day} alt="day" />
 
         </button>
         <input
@@ -33,7 +35,7 @@ function NavBar() {
           onClick={() => setDarkMode(233)}
         >
 
-          <img src="./src/assets/svg/moon.svg" alt="svg" />
+            <img src={darc} alt="night" />
 
         
         </button>
