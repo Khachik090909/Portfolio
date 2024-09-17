@@ -4,6 +4,7 @@ import { useUserContext } from "../contexte/UserContext";
 import "./NavBar.scss";
 import darc from "../assets/svg/moon.svg";
 import day from "../assets/svg/day-mode.svg";
+
 function NavBar() {
   const navigate = useNavigate();
   const { darkMode, setDarkMode } = useUserContext();
@@ -18,7 +19,9 @@ function NavBar() {
       <h3>Portfolio.</h3>
       <div className="darc-mode ">
         <button className="day-mode dark-icon" onClick={() => setDarkMode(22)}>
+
           <img src={day} alt="day" />
+
         </button>
         <input
           type="range"
@@ -31,7 +34,12 @@ function NavBar() {
           className="night-mode dark-icon"
           onClick={() => setDarkMode(233)}
         >
-          <img src={darc} alt="night" />
+
+
+            <img src={darc} alt="night" />
+
+        
+
         </button>
       </div>
 
