@@ -20,7 +20,7 @@ function NavBar() {
       <div className="darc-mode ">
         <button className="day-mode dark-icon" onClick={() => setDarkMode(22)}>
 
-            <img src={day} alt="day" />
+          <img src={day} alt="day" />
 
         </button>
         <input
@@ -35,9 +35,11 @@ function NavBar() {
           onClick={() => setDarkMode(233)}
         >
 
+
             <img src={darc} alt="night" />
 
         
+
         </button>
       </div>
 
