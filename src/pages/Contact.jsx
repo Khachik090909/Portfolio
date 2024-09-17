@@ -5,6 +5,8 @@ import emailjs from "emailjs-com";
 import contactPages from "../assets/svg/cahier.svg";
 
 const ContactForm = () => {
+  const dimensionWidth = window.innerWidth;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,39 +52,94 @@ const ContactForm = () => {
         backgroundColor: `rgb(
       ${255 - darkMode}, ${255 - darkMode}, ${255 - darkMode}`,
         color:
-          darkMode < 125
-            ? `rgb(${darkMode - 22}, ${darkMode - 22}, ${darkMode - 22})`
-            : `rgb(${darkMode + 22}, ${darkMode + 22}, ${darkMode + 22})`,
+          darkMode < 125 && dimensionWidth < 600
+            ? `rgb(255 255 255)`
+            : `rgb(0 0 0 1)`,
       }}
     >
       <img className="contact-pages" src={contactPages} alt="contactPages" />
 
       <div className="contact-form-title">
-        <h1>Me contacter</h1>
+        <h1
+          style={{
+            color:
+              darkMode > 125 && dimensionWidth < 600
+                ? `rgb(255 255 255)`
+                : `rgb(0 0 0 )`,
+          }}
+        >
+          Me contacter
+        </h1>
       </div>
       <form className="contact-form">
-        <div>
-          <label htmlFor="name">Nom:</label>
+        <div className="imput-group">
+          <label
+            style={{
+              color:
+                darkMode > 125 && dimensionWidth < 600
+                  ? `rgb(255 255 255)`
+                  : `rgb(0 0 0 )`,
+            }}
+            htmlFor="name"
+          >
+            Nom:
+          </label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            style={{
+              borderColor:
+                darkMode > 125 && dimensionWidth < 600
+                  ? `rgb(255 255 255)`
+                  : `rgb(0 0 0 )`,
+            }}
           />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
+        <div className="imput-group">
+          <label
+            htmlFor="email"
+            style={{
+              color:
+                darkMode > 125 && dimensionWidth < 600
+                  ? `rgb(255 255 255)`
+                  : `rgb(0 0 0 )`,
+            }}
+          >
+            Email:
+          </label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            style={{
+              borderColor:
+                darkMode > 125 && dimensionWidth < 600
+                  ? `rgb(255 255 255)`
+                  : `rgb(0 0 0 )`,
+            }}
           />
         </div>
-        <div>
-          <label htmlFor="message">Message:</label>
+        <div className="message">
+          <label
+            htmlFor="message"
+            style={{
+              color:
+                darkMode > 125 && dimensionWidth < 600
+                  ? `rgb(255 255 255)`
+                  : `rgb(0 0 0 )`,
+              borderColor:
+                darkMode > 125 && dimensionWidth < 600
+                  ? `rgb(255 255 255)`
+                  : `rgb(0 0 0 )`,
+            }}
+          >
+            Message:
+          </label>
           <textarea
             id="message"
             name="message"
@@ -90,7 +147,21 @@ const ContactForm = () => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Envoyer</button>
+        <button
+          type="submit"
+          style={{
+            color:
+              darkMode > 125 && dimensionWidth < 600
+                ? `rgb(255 255 255)`
+                : `rgb(0 0 0 )`,
+            borderColor:
+              darkMode > 125 && dimensionWidth < 600
+                ? `rgb(255 255 255)`
+                : `rgb(0 0 0 )`,
+          }}
+        >
+          Envoyer
+        </button>
       </form>
     </div>
   );

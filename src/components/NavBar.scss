@@ -82,3 +82,62 @@
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .navbar {
+    h3 {
+      font-size: clamp(1.5rem, 2.5vw, 3rem);
+    }
+    .darc-mode {
+      gap: 0.4rem;
+      left: 40%;
+
+      .dark-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .nav-bar-container {
+      gap: 2vw;
+      .nav-bar-item {
+        font-size: clamp(1rem, 2vw, 2rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    h3 {
+      font-size: clamp(1.2rem, 2.5vw, 3rem);
+    }
+    .darc-mode {
+      gap: 0.4rem;
+      left: 36%;
+
+      .dark-icon {
+        width: 30px;
+        height: 30px;
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 3px; /* Ajustez la largeur selon vos besoins */
+        height: 30px; /* Hauteur du slider */
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+
+        height: 30px; /* Hauteur du pouce */
+
+        cursor: none;
+      }
+    }
+
+    .nav-bar-container {
+      gap: 2vw;
+      .nav-bar-item {
+        font-size: clamp(0.9rem, 2vw, 2rem);
+      }
+    }
+  }
+}

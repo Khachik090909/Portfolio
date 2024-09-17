@@ -7,9 +7,7 @@
 button {
   border: none;
 }
-a {
-  cursor: none !important;
-}
+
 .home {
   width: 100vw;
   height: 100vh;
@@ -23,13 +21,13 @@ a {
       flex-direction: column;
       gap: 2rem;
       h3 {
-        font-size: 2rem;
+        font-size: clamp(1.4rem, 2.5vw, 3rem);
       }
       h1 {
-        font-size: 3rem;
+        font-size: clamp(2rem, 4vw, 5rem);
       }
       p {
-        font-size: 1.5rem;
+        font-size: clamp(1.13rem, 1.7vw, 2rem);
         width: 23vw;
       }
     }
@@ -44,8 +42,10 @@ a {
       .download {
         z-index: 2;
 
+        cursor: none !important;
+
         text-decoration: none;
-        font-size: 3rem;
+        font-size: clamp(2rem, 4vw, 5rem);
 
         padding: 50px 0 0 50px;
       }
@@ -56,7 +56,7 @@ a {
     .hero {
       width: 30vw;
       height: 87vh;
-      margin-right: 50px;
+      margin-right: 5vw;
       margin-top: 50px;
       img {
         width: 100%;
@@ -76,6 +76,7 @@ a {
       border: 4px solid rgb(44, 102, 194);
       padding: 5px;
       border-radius: 5px;
+      font-size: clamp(2rem, 3vw, 5rem);
     }
   }
   .curser {
@@ -87,26 +88,50 @@ a {
   }
 }
 
-h4 {
-  height: 1.2em;
-  display: flex;
-  align-items: center;
-}
-.cursor-text {
-  display: inline-block;
-  width: 4px; /* Largeur du curseur */
-
-  margin: 0 0 0 0.1em; /* Marges du curseur */
-  height: 1.2em; /* Hauteur du curseur, ajustez selon vos besoins */
-  background-color: black; /* Couleur du curseur */
-  animation: blink-animation 1s infinite; /* Animation de clignotement */
-}
-img {
-  color: aqua;
-}
-
 @keyframes blink-animation {
   50% {
     opacity: 0; /* Le curseur devient invisible à la moitié de l'animation */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    .home-container {
+      .info {
+        padding: 7vh 3vw;
+        gap: 1rem;
+        h3 {
+          font-size: clamp(1.2rem, 2.5vw, 3rem);
+        }
+        h1 {
+          font-size: clamp(1.5rem, 4vw, 5rem);
+        }
+        p {
+          font-size: clamp(1rem, 1.7vw, 2rem);
+          width: 43vw;
+        }
+      }
+      .download-cv {
+        top: 58%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .download {
+          font-size: clamp(2rem, 4vw, 5rem);
+        }
+      }
+
+      .hero {
+        height: 37vh;
+      }
+    }
+    .tecno {
+      top: 90%;
+
+      h1 {
+        font-size: clamp(1rem, 3vw, 5rem);
+      }
+    }
   }
 }
