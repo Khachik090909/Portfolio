@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  cursor: none !important;
+}
+.home .home-container {
+  display: flex;
+  justify-content: space-between;
+}
+.home .home-container .info {
+  padding: 17vh 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home .home-container .info h3 {
+  font-size: clamp(1.4rem, 2.5vw, 3rem);
+}
+.home .home-container .info h1 {
+  font-size: clamp(2rem, 4vw, 5rem);
+}
+.home .home-container .info p {
+  font-size: clamp(1.13rem, 1.7vw, 2rem);
+  width: 23vw;
+}
+.home .home-container .download-cv {
+  z-index: 2;
+  position: absolute;
+  height: 90px;
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  transition: 300ms;
+}
+.home .home-container .download-cv .download {
+  z-index: 2;
+  cursor: none !important;
+  text-decoration: none;
+  font-size: clamp(2rem, 4vw, 5rem);
+  padding: 50px 0 0 50px;
+}
+.home .home-container .download-cv:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.home .home-container .hero {
+  width: 30vw;
+  height: 87vh;
+  margin-right: 5vw;
+  margin-top: 50px;
+}
+.home .home-container .hero img {
+  width: 100%;
+  height: 100%;
+}
+.home .tecno {
+  position: absolute;
+  padding: 0 3vw;
+  top: 85%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home .tecno h1 {
+  border: 4px solid rgb(44, 102, 194);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+.home .curser {
+  z-index: 1;
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0; /* Le curseur devient invisible à la moitié de l'animation */
+  }
+}
+@media screen and (max-width: 800px) {
+  .home .home-container .info {
+    padding: 7vh 3vw;
+    gap: 1rem;
+  }
+  .home .home-container .info h3 {
+    font-size: clamp(1.2rem, 2.5vw, 3rem);
+  }
+  .home .home-container .info h1 {
+    font-size: clamp(1.5rem, 4vw, 5rem);
+  }
+  .home .home-container .info p {
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    width: 43vw;
+  }
+  .home .home-container .download-cv {
+    top: 58%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .home .home-container .download-cv .download {
+    font-size: clamp(2rem, 4vw, 5rem);
+  }
+  .home .home-container .hero {
+    height: 37vh;
+  }
+  .home .tecno {
+    top: 90%;
+  }
+  .home .tecno h1 {
+    font-size: clamp(1rem, 3vw, 5rem);
+  }
+}/*# sourceMappingURL=Home.css.map */

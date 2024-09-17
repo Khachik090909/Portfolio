@@ -1,0 +1,122 @@
+.navbar {
+  z-index: 100;
+  padding: 0 3vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(45deg, rgba(92, 111, 142, 0.201), rgba(44, 102, 194, 0.287));
+  display: flex;
+  justify-content: space-between;
+}
+.navbar h3 {
+  color: black;
+  font-size: 1.7rem;
+}
+.navbar .darc-mode {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.navbar .darc-mode .dark-icon {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  transition: 300ms;
+}
+.navbar .darc-mode .dark-icon img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+.navbar .darc-mode .dark-icon:hover {
+  scale: 1.2;
+}
+.navbar .darc-mode input[type=range] {
+  -webkit-appearance: none;
+  width: 80px; /* Ajustez la largeur selon vos besoins */
+  height: 20px; /* Hauteur du slider */
+  background: #d3d3d3; /* Couleur de fond */
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  transition: 0.3s;
+}
+.navbar .darc-mode input[type=range]:hover {
+  opacity: 1;
+  scale: 1.2;
+}
+.navbar .darc-mode input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px; /* Largeur du pouce */
+  height: 20px; /* Hauteur du pouce */
+  background: #121212; /* Couleur du pouce */
+  cursor: pointer;
+}
+.navbar .nav-bar-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.navbar .nav-bar-container .nav-bar-item {
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar h3 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+  }
+  .navbar .darc-mode {
+    gap: 0.4rem;
+    left: 40%;
+  }
+  .navbar .darc-mode .dark-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .navbar .nav-bar-container {
+    gap: 2vw;
+  }
+  .navbar .nav-bar-container .nav-bar-item {
+    font-size: clamp(1rem, 2vw, 2rem);
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar h3 {
+    font-size: clamp(1.2rem, 2.5vw, 3rem);
+  }
+  .navbar .darc-mode {
+    gap: 0.4rem;
+    left: 36%;
+  }
+  .navbar .darc-mode .dark-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .navbar .darc-mode input[type=range] {
+    -webkit-appearance: none;
+    width: 3px; /* Ajustez la largeur selon vos besoins */
+    height: 30px; /* Hauteur du slider */
+  }
+  .navbar .darc-mode input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 30px; /* Hauteur du pouce */
+    cursor: none;
+  }
+  .navbar .nav-bar-container {
+    gap: 2vw;
+  }
+  .navbar .nav-bar-container .nav-bar-item {
+    font-size: clamp(0.9rem, 2vw, 2rem);
+  }
+}/*# sourceMappingURL=NavBar.css.map */

@@ -1,0 +1,261 @@
+.contact {
+  padding: 50px 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-pages {
+  width: 90vw;
+  height: 85vh;
+  position: absolute;
+}
+.contact .contact-form-title {
+  position: absolute;
+  right: 50vw;
+  width: 32vw;
+  height: 83vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .contact-form-title h1 {
+  font-size: clamp(1rem, 3.5vw, 5rem);
+  color: black;
+}
+.contact .contact-form {
+  position: absolute;
+  left: 50vw;
+  width: 32vw;
+  height: 45vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  color: black;
+  padding: 4vw;
+}
+.contact .contact-form .imput-group {
+  width: 24vw;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact-form label {
+  font-size: clamp(1rem, 1.7vw, 2rem);
+}
+.contact .contact-form input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  width: 19vw;
+  height: 3vh;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+.contact .contact-form input:focus {
+  outline: none;
+}
+.contact .contact-form .message {
+  display: flex;
+  flex-direction: column;
+  width: 24vw;
+}
+.contact .contact-form .message textarea {
+  background-color: transparent;
+  height: 27vh;
+  width: 24vw;
+  font-size: clamp(1rem, 1.3vw, 2rem);
+  resize: none;
+  box-sizing: border-box;
+}
+.contact .contact-form .message textarea:focus {
+  outline: none;
+}
+.contact .contact-form button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: clamp(0.8rem, 1.5vw, 2rem);
+  transition: 300ms;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 10vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-form button:hover {
+  scale: 1.1;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact .contact-form-title {
+    right: 50vw;
+    width: 39vw;
+  }
+  .contact .contact-form {
+    left: 50vw;
+    width: 39vw;
+    height: 59vw;
+    padding: 6vw;
+  }
+  .contact .contact-form .imput-group {
+    width: 30vw;
+    height: 4vh;
+  }
+  .contact .contact-form label {
+    font-size: clamp(1rem, 1.7vw, 2rem);
+  }
+  .contact .contact-form input {
+    width: 25vw;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+  }
+  .contact .contact-form .message {
+    width: 30vw;
+  }
+  .contact .contact-form .message textarea {
+    height: 27vh;
+    width: 30vw;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+  }
+  .contact .contact-form button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 10vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact .contact-form-title {
+    right: 50vw;
+    width: 44vw;
+  }
+  .contact .contact-form {
+    left: 50vw;
+    width: 44vw;
+    height: 59vw;
+    padding: 6vw;
+  }
+  .contact .contact-form .imput-group {
+    width: 33vw;
+    height: 4vh;
+  }
+  .contact .contact-form label {
+    font-size: clamp(1.2rem, 1.7vw, 2rem);
+  }
+  .contact .contact-form input {
+    width: 28vw;
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+  }
+  .contact .contact-form .message {
+    width: 33vw;
+    display: flex;
+  }
+  .contact .contact-form .message label {
+    padding-block: 5px;
+  }
+  .contact .contact-form .message textarea {
+    height: 27vh;
+    width: 33vw;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+  }
+  .contact .contact-form button {
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 10vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contact .contact-form-title {
+    right: 50vw;
+    width: 44vw;
+  }
+  .contact .contact-form {
+    left: 50vw;
+    width: 44vw;
+    height: 60vw;
+    padding: 4vw 6vw;
+  }
+  .contact .contact-form .imput-group {
+    width: 33vw;
+    height: 10vh;
+  }
+  .contact .contact-form label {
+    font-size: clamp(1rem, 1.2vw, 2rem);
+  }
+  .contact .contact-form input {
+    width: 27vw;
+    font-size: clamp(1rem, 1vw, 2rem);
+  }
+  .contact .contact-form .message {
+    width: 33vw;
+  }
+  .contact .contact-form .message label {
+    padding-block: 0 10px;
+  }
+  .contact .contact-form .message textarea {
+    height: 55vh;
+    width: 33vw;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+  }
+  .contact .contact-form button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 10vw;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact .contact-pages {
+    width: 0vw;
+    height: 0vh;
+  }
+  .contact .contact-form-title {
+    top: 10vh;
+    right: 50vw;
+    transform: translateX(50%);
+    width: 90vw;
+    height: 20vw;
+  }
+  .contact .contact-form-title h1 {
+    font-size: clamp(2.5rem, 4vw, 2rem);
+  }
+  .contact .contact-form {
+    top: 40vw;
+    left: 50vw;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 70vh;
+    padding: 4vw 6vw;
+  }
+  .contact .contact-form .imput-group {
+    width: 90%;
+    height: 10vh;
+  }
+  .contact .contact-form label {
+    font-size: clamp(1.5rem, 1.9vw, 2rem);
+  }
+  .contact .contact-form input {
+    width: 80%;
+    font-size: clamp(1rem, 1vw, 2rem);
+  }
+  .contact .contact-form .message {
+    width: 90%;
+  }
+  .contact .contact-form .message label {
+    padding-block: 0 10px;
+  }
+  .contact .contact-form .message textarea {
+    height: 55vh;
+    width: 100%;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+  }
+  .contact .contact-form button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 30vw;
+    margin-top: 0px;
+    font-size: clamp(1.5rem, 1.9vw, 2rem);
+  }
+}/*# sourceMappingURL=contact.css.map */
