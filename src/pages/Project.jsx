@@ -12,7 +12,7 @@ import { useUserContext } from "../contexte/UserContext";
 const images = [slide1, slide2, slide3, slide4, slide5];
 const links = [
   "https://panda-project-seven.vercel.app/",
-  "https://coctail-atom.vercel.app/",
+  "https://cocktail-atom.vercel.app/",
   "https://panda-project-seven.vercel.app/",
   "https://boutade.vercel.app/",
   "https://lorem-project-seven.vercel.app/",
@@ -46,8 +46,11 @@ function Project() {
           <div className="project-title">
             <h1>{currentTitle}</h1>
             <p>{currentDescription}</p>
-            <button onClick={() => window.open(currentLink, "_blank")}>
-              Démonstration
+            <button
+              className={"demo" + "-" + activeIndex}
+              onClick={() => window.open(currentLink, "_blank")}
+            >
+              <span>Démonstration</span>
             </button>
           </div>
           <div className="project-img">

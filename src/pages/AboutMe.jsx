@@ -9,9 +9,10 @@ import js from "../assets/icon-dev/js.svg";
 import sql from "../assets/icon-dev/sql.svg";
 import attaque from "../assets/icon-dev/attaque.png";
 import attaque1 from "../assets/icon-dev/attaque1.png";
-import facebook from "../assets/svg/facebook.svg";
+import facebook from "../assets/svg/email.svg";
 import github from "../assets/svg/github.svg";
 import linkedin from "../assets/svg/lincedin.svg";
+import hero from "../assets/svg/hero.svg";
 
 function AboutMe() {
   const { darkMode } = useUserContext();
@@ -156,7 +157,7 @@ function AboutMe() {
           </div>
         </div>
         <div className="hero">
-          <img src="/src/assets/svg/hero.svg" alt="" />
+          <img src={hero} alt="" />
         </div>
       </div>
       {icones &&
