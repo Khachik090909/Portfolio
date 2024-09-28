@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { typeAndDeleteText, typeText } from "../components/functiones";
 import { useUserContext } from "../contexte/UserContext";
 import "./Home.scss";
@@ -7,7 +6,6 @@ import "./Home.scss";
 import curser from "../assets/cueseur.png";
 import heroDev from "../assets/svg/heroDev.svg";
 function Home() {
-  const navigate = useNavigate();
   const dev = [
     "Frontend Developer",
     "Backend Developer",
