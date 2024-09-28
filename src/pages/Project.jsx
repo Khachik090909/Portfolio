@@ -11,11 +11,11 @@ import { useUserContext } from "../contexte/UserContext";
 
 const images = [slide1, slide2, slide3, slide4, slide5];
 const links = [
-  "https://panda-project-seven.vercel.app/",
+  "https://geocode-lake.vercel.app/",
   "https://cocktail-atom.vercel.app/",
   "https://panda-project-seven.vercel.app/",
-  "https://boutade.vercel.app/",
-  "https://lorem-project-seven.vercel.app/",
+  "https://joyeuse-boutade.vercel.app/",
+  "https://suit-your-look.vercel.app/",
 ];
 
 function Project() {

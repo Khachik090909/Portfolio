@@ -24,6 +24,7 @@
       // flex-direction: column-reverse;
       // align-items: center;
       .project-title {
+        font-size: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -99,7 +100,7 @@
     transition: 300ms;
     cursor: pointer;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 3rem;
   }
   button:hover {
     scale: 1.1;

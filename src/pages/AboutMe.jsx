@@ -157,7 +157,7 @@ function AboutMe() {
           </div>
         </div>
         <div className="hero">
-          <img src={hero} alt="" />
+          <img src={hero} alt="mon photo" />
         </div>
       </div>
       {icones &&
